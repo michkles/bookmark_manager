@@ -9,7 +9,6 @@ class Link
   property :url,    String
 
 end
-
 # Now let's set up a connection with a database
 DataMapper.setup(:default, "postgres://localhost/bookmark_manager_test")
 # Let's check that everything we wrote in our models was OK
