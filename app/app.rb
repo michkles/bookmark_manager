@@ -1,7 +1,10 @@
 require 'sinatra/base'
 require_relative 'models/link'
 
+
 class BookmarkManager < Sinatra::Base
+
+ENV["RACK_ENV"] ||= "development"
 
   get '/links' do
     @links = Link.all
@@ -17,4 +20,6 @@ class BookmarkManager < Sinatra::Base
     redirect '/links'
   end
 
+
+#run! if app_file == $0
 end
