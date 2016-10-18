@@ -1,3 +1,5 @@
+require_relative 'spec_helper'
+
 feature 'creating links' do
 
   scenario 'adding site\'s address and title' do
