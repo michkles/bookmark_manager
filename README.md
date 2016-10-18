@@ -1,4 +1,4 @@
-# Bookmark Manager
+# Super-awesome-bookmark-manager
 
 ```
 As a Makers Student
