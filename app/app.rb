@@ -7,11 +7,9 @@ class BookmarkManager < Sinatra::Base
 
 ENV["RACK_ENV"] ||= "development"
 
-  before do
-  @links = Link.all
-  end
 
   get '/links' do
+    @links = Link.all
     erb :'links/index'
   end
 
@@ -20,12 +18,14 @@ ENV["RACK_ENV"] ||= "development"
   end
 
   get '/links/tag' do
-
     erb :'links/tag'
   end
 
   post '/links' do
-    Link.create(url: params[:url], title: params[:title])
+    link = Link.new(url: params[:url], title: params[:title])
+    tag = Tag.first_or_create(name:params[:tags])
+    link.tags << tag
+    link.save
     redirect '/links'
   end
 
