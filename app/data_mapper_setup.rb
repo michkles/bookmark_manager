@@ -1,6 +1,6 @@
-require 'dm-migrations'
 require 'data_mapper'
 require 'dm-postgres-adapter'
+require 'dm-migrations'
 
 require_relative 'models/tag'
 require_relative 'models/link'
