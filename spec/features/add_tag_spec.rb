@@ -12,4 +12,15 @@ feature 'Add tags to links' do
       expect(link.tags.map(&:name)).to include('Action')
   end
 
+
+  scenario 'Adding multiple tags to a new link' do
+    visit '/links/new'
+    fill_in 'url', with: 'http://www.kittens.com/'
+    fill_in 'title', with: 'This is Kittens'
+    fill_in 'tags', with: 'animals pets'
+    click_button 'Create link'
+    link = Link.first
+    expect(link.tags.map(&:name)).to include('animals','pets')
+  end
+
 end
