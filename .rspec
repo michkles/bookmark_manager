@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 --color
+=======
+--color --format documentation
+>>>>>>> day-threeb
 --require spec_helper
