@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 #bookmark_manager
-=======
+
 # Super-awesome-bookmark-manager
 
 ```
@@ -28,4 +28,3 @@ As a Makers Student
 So that I can find relevant information quickly
 I want to filter my links by a tag
 ```
->>>>>>> day-threeb
