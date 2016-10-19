@@ -1,7 +1,4 @@
-
-#bookmark_manager
-
-# Super-awesome-bookmark-manager
+# Super-awesome-bookmark-manager in progess...
 
 ```
 As a Makers Student
