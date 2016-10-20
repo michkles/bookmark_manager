@@ -55,7 +55,7 @@ class BookmarkManager < Sinatra::Base
       session[:user_id] = user.id
       redirect '/links'
     else
-      nil
+      redirect '/users/new'
     end
   end
 
