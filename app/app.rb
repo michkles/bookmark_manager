@@ -17,6 +17,12 @@ class BookmarkManager < Sinatra::Base
     end
   end
 
+  get '/index' do
+    erb :index
+  end
+
+
+
   get '/links' do
     @links = Link.all
     erb :'links/index'
@@ -58,7 +64,7 @@ class BookmarkManager < Sinatra::Base
       session[:user_id] = @user.id
       redirect to('/links')
     else
-  
+
       flash.now[:errors] = @user.errors.full_messages
       erb :'users/new'
 
