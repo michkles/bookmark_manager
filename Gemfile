@@ -8,6 +8,7 @@ gem 'data_mapper'
 gem 'dm-postgres-adapter'
 gem 'rerun'
 gem 'rake'
+gem 'bcrypt'
 
 
 group :test do
