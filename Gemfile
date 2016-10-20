@@ -9,6 +9,7 @@ gem 'dm-postgres-adapter'
 gem 'rerun'
 gem 'rake'
 gem 'bcrypt'
+gem 'sinatra-flash'
 
 
 group :test do
