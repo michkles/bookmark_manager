@@ -6,6 +6,7 @@ require 'database_cleaner'
 require 'capybara/rspec'
 require './app/models/link'
 require './app/models/tag'
+require './app/models/user'
 require 'data_mapper'
 require 'features/web_helper'
 

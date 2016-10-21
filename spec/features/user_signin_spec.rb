@@ -3,7 +3,9 @@ require 'spec_helper'
 
 feature 'signing in' do
 
-let(:user) { User.create(email: 'mak@on.com', password: 'abc', password_confirmation: 'abc') }
+let!(:user) do
+  User.create(email: 'mak@on.com', password: 'abc', password_confirmation: 'abc')
+end
 
   scenario 'a user can sign in' do
     visit('/sessions/new')
@@ -12,4 +14,9 @@ let(:user) { User.create(email: 'mak@on.com', password: 'abc', password_confirma
     click_button 'Sign in'
     expect(page).to have_content("Hello #{user.email}")
   end
+
+  it 'does not authenticate when given an incorrect password' do
+    expect(User.authenticate(user.email, 'wrong')).to be_nil
+  end
+
 end
