@@ -17,11 +17,9 @@ class BookmarkManager < Sinatra::Base
     end
   end
 
-  get '/index' do
-    erb :index
+  get '/sessions/new' do
+    erb :'sessions/new'
   end
-
-
 
   get '/links' do
     @links = Link.all
